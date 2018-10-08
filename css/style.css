@@ -44,19 +44,18 @@ a:hover
     
 }
 
+
+
+/*このcontainerが境*/
 .container{
   display: flex;
   flex-direction: row;
 }
+
+
 .box {
   margin: 10px;
   flex: 1;
-}
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
-
 }
 
 p{
@@ -81,15 +80,16 @@ div p {
 
 
 footer{
-        text-align: center;
+    text-align: center;
     padding: 10px 10px;
     background-color: #EEEEEE;
 }
 
 .button{
+    margin:auto;/*これでセンター寄せ*/
     color: #fff;
     background-color: #9A9A9A;
-    padding: 5px;
+    padding: 5px 100px;/*これで大きさ調整*/
     border-radius: 5px;
 }
 
@@ -99,3 +99,19 @@ footer{
   color: #000;
 }
 
+/*------------ここからスマホです------------*/
+
+@media (max-width: 768px) {
+
+.flexible {
+  height: 250px;
+}
+
+  .container {
+    flex-direction: column;
+  }
+
+
+/*------------ここまでスマホです------------*/
+
+}
